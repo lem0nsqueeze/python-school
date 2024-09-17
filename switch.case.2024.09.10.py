@@ -40,6 +40,46 @@ match lang:
     case _:
         print("The language doesn't matter, what matters is solving problems.")
 
+# Example 1 - without "if"
+points = float(input("Ange ditt poäng: "))
+
+rounded_points = int(points // 10)
+
+match rounded_points:
+    case 0 | 1 | 2 | 3 | 4:
+        print("Ej Godkänd")
+    case 5:
+        print("E")
+    case 6:
+        print("D")
+    case 7:
+        print("C")
+    case 8:
+        print("B")
+    case 9 | 10:
+        print("A")
+    case _:
+        print("Ange ett numeriskt värde mellan 0-100")
+
+# Example 2 - with "if"
+points = float(input("Ange ditt poäng: "))
+
+match points:
+    case p if 0 <= p < 50:
+        print("Ej Godkänd")
+    case p if 50 <= p <= 59:
+        print("E")
+    case p if 60 <= p <= 69:
+        print("D")
+    case p if 70 <= p <= 79:
+        print("C")
+    case p if 80 <= p <= 89:
+        print("B")
+    case p if 90 <= p <= 100:
+        print("A")
+    case _:
+        print("Ange ett numeriskt värde mellan 0-100")
+
 # ===========================================================================
 # NAME
 #     switch-case vs if-elif-else in Python
