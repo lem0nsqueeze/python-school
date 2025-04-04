@@ -1,86 +1,54 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
 import socket
+
 print("This is a vodka-bottle-documentation, sorry, no automation at this time, :-/")
 raise SystemExit
 
-print(4 + 2)
-# 6
+# Arithmetic operations
+print(4 + 2)             # 6
+print(4 - 2)             # 2
+print(4 * 2)             # 8
+print(6 / 2)             # 3.0
+print(38 + 11 + 8)       # 57
 
-print(4 - 2)
-# 2
-
-print(4 * 2)
-# 8
-
-print(4 + 2)
-# 6
-
-print(4 - 2)
-# 2
-
-print(6 / 2)
-# 3
-
-print(38 + 11 + 8)
-# 57
-
-print("38 + 11 + 8")
-# 38 + 11 + 8
-
+# Demonstrating string vs. evaluated expression
+print("38 + 11 + 8")     # 38 + 11 + 8
 print("you'll have to pay:")
-print(38 + 11 + 8)
-# you'll have to pay
-# 57
+print(38 + 11 + 8)       # 57
 
-print("you'll have to pay:", 38 + 11 + 8, "kr.")
-# you'll have to pay: 57 kr.
+# Concatenated and formatted output
+print("you'll have to pay:", 38 + 11 + 8, "kr.")              # you'll have to pay: 57 kr.
+print("you'll have to pay:\n", 38 + 11 + 8, "kr.")            # newline with indent
+print(f"you'll have to pay:\n{38 + 11 + 8} kr.")              # f-string
+print("you'll have to pay:\n%d kr." % (38 + 11 + 8))          # printf-style
 
-# - issue: space before '57' on line 36
-print("you'll have to pay:\n",38 + 11 + 8, "kr.")
-# you'll have to pay:
-#  57 kr.
-
-# - solution for line 36:
-print("you'll have to pay:\n" f"{38 + 11 + 8}" "kr.")
-print("you'll have to pay:\n%d kr." % (38 + 11 + 8))
-# you'll have to pay:
-# 57 kr.
-
+# Escape sequences and tabs
 print("Languages:\nPython\tJava\nJavaScript")
-# Languages:
-# Python    Java
-# Javascript
 
-print(12 - 7)
-print(24/3+9)
-print(8*2* (5-3)+16/4 -1)
-# 5
-# 17.0
-# 35.0
+# More expressions
+print(12 - 7)                                # 5
+print(24 / 3 + 9)                            # 17.0
+print(8 * 2 * (5 - 3) + 16 / 4 - 1)          # 35.0
 
-print("Hello!\nHow are you?")
-# Hello!
-# How are you?
+# Newlines and basic string manipulation
+print("Hello!\nHow are you?")               # Hello! \n How are you?
 
-print("1" + "1")
-print(3 * "1")
-print(1 +1)
-print(1 * 3)
-# 11
-# 111
-# 2
-# 3
+print("1" + "1")                             # 11
+print(3 * "1")                               # 111
+print(1 + 1)                                 # 2
+print(1 * 3)                                 # 3
 
-print("hello" , "hello")
-# hello hello
-print("hello\t" *10)
-# hello hello hello hello hello hello hello hello hello hello
+print("hello", "hello")                      # hello hello
+print("hello\t" * 10)                        # repeated with tabs
+
+# Speed × time example
+speed = 70
+time = 1.5
+distance = speed * time
 
 print("If you drive at a speed of 70 km/h in 1.5 hours, then you can make a")
-print(70 *1.5)
+print(distance)
 print("km. trip")
-# If you drive at a speed of 70 km/h in 1.5 hours, then you can make a
-# 105.0
-# km. trip
-print("If you drive at a speed of 70 km/h in 1.5 hours, then you can make a", (70*1.5), "km. trip")
-# If you drive at a speed of 70 km/h in 1.5 hours, then you can make a 105.0 km. trip
+
+print(f"If you drive at a speed of {speed} km/h in {time} hours, then you can make a {distance} km. trip")
