@@ -1,162 +1,89 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
 import socket
+
 print("This is a vodka-bottle-documentation, sorry, no automation at this time, :-/")
 raise SystemExit
 
 ##########################################################
 
-# - a function is defined by the programmer
-# - def mathAdd_name(arguments)
-
 def math_add_multiply(num1, num2):
-    result = num1 * num2 + num1
-    return result
+    return num1 * num2 + num1
 
 print(math_add_multiply(4, 5))
 print(math_add_multiply(8, 9))
 
 ##########################################################
 
-def math_add_multiply(num1, num2):
-    result = num1 * num2 + num1
-    return result
-
 y = math_add_multiply(5, 1) + math_add_multiply(3, 1)
 print(y)
 
 ##########################################################
 
-def mathAdd(num1, num2):
-    result = num1 + num2
-    return result
+def math_add(num1, num2):
+    return num1 + num2
 
-x = mathAdd(2, 3)
+x = math_add(2, 3)
 print(x)
 
 ##########################################################
 
-def traingle_area(base, height):
-    result = base * height / 2
-    return result
+def triangle_area(base, height):
+    return base * height / 2
 
-area = (traingle_area(5, 7))
+area = triangle_area(5, 7)
 print(area)
 
 ##########################################################
-# TODO:
-# - define a function that takes the radius of a circle
-# - floato a parameter and then calculates the circle area
-# - please user pi
-
-# - use the function to calculate the area of a circle with
-# - the radius 3m, a radius with 2m and a radius with 2.5m
+# Calculate circle area using radius and pi
 
 import math
 
 def circle_area(radius):
-    result = pow(radius, 2) * math.pi
-    return result
+    return math.pi * radius ** 2
 
-area1 =(circle_area(3))
-area2 =(circle_area(2))
-area3 =(circle_area(2.5))
-
-print(area1, area2, area3)
-
-##########################################################
-import math
-
-def traingle_area(base, height):
-    result = base * height / 2
-    return result
-
-input1 = int(input('enter the first number: '))
-input2 = int(input('enter the second number: '))
-
-area = (traingle_area(input1, input2))
-print(area)
+print(circle_area(3))
+print(circle_area(2))
+print(circle_area(2.5))
 
 ##########################################################
 
-import math
-
-def circle_area(radius1):
-    result = pow(radius1, 2) * math.pi
-    return result
-
-area1 = float(input('enter the first circle radius: '))
-area = (circle_area(area1))
-print(area)
-
-def circle_area(radius2):
-    result = pow(radius2, 2) * math.pi
-    return result
-
-area2 = float(input('enter the second circle radius: '))
-area = (circle_area(area2))
-print(area)
-
-def circle_area(radius3):
-    result = pow(radius3, 2) * math.pi
-    return result
-
-area3 = float(input('enter the third circle radius: '))
-area = (circle_area(area3))
-print(area)
+base = int(input('Enter base of triangle: '))
+height = int(input('Enter height of triangle: '))
+print(triangle_area(base, height))
 
 ##########################################################
-# TODO:
-# a) a function that compares two numbers and returns
-#    the one with the highest value
-# b) use the funtion to get the highest value out of
-#    these numbers: 3, 55, -5
+
+radius1 = float(input('Enter first circle radius: '))
+print(circle_area(radius1))
+
+radius2 = float(input('Enter second circle radius: '))
+print(circle_area(radius2))
+
+radius3 = float(input('Enter third circle radius: '))
+print(circle_area(radius3))
+
+##########################################################
+# Return max of three numbers
 
 def max_number(num1, num2, num3):
-    array = [num1, num2, num3]
-    return max(array)
+    return max(num1, num2, num3)
 
 print(max_number(3, 55, -5))
 
 ##########################################################
 
-def my_function(food):
-    for x in food:
-        print(x)
-    return x
-    
+def print_items(items):
+    for item in items:
+        print(item)
+
 fruits = ['apple', 'banana', 'cherry']
-my_function(fruits)
+print_items(fruits)
 
 ##########################################################
+# Return the longest word
 
-def my_function(food):
-    for x in food:
-        print(x)
-    return x
-    
-fruits = ['apple', 'banana', 'cherry']
-my_function(fruits)
+def longest_word(word1, word2):
+    return max(word1, word2, key=len)
 
-##########################################################
-# TODO:
-# a) compare the words and print the longest word
-# b) use the following words in a function:
-#    "book" "ruler"   
-
-def warehouse_items(book, ruler):
-    office_items = [book, ruler]
-    return max(office_items)
-
-print(warehouse_items('book', 'ruler'))
-
-##########################################################
-# TODO:
-# a) compare the words and print the longest word
-# b) use the following words in a function:
-#    "book" "ruler"   
-
-def warehouse_items(book, ruler):
-    office_items = [book, ruler]
-    return max(office_items)
-
-print(warehouse_items('book', 'ruler'))
+print(longest_word('book', 'ruler'))
