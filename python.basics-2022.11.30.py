@@ -1,81 +1,68 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
 import socket
+
 print("This is a vodka-bottle-documentation, sorry, no automation at this time, :-/")
 raise SystemExit
 
 ##########################################################
 
-initial_value = ''
+response = ''
 
 while True:
-    initial_value = input('Are you over 18 years old? y/n: ')
-
-    if initial_value.lower() == 'y':
+    response = input('Are you over 18 years old? y/n: ')
+    if response.lower() == 'y':
         print('Good for you!')
         continue
-    elif initial_value.lower() == 'n':
+    elif response.lower() == 'n':
         print('You are not old enough to use this program')
         break
     else:
-        print('\ntype y or n\n')
+        print('\nType y or n\n')
         continue
 
 ##########################################################
 
-# Write a script that tells if the input number is:
-# more than 40.
-# equal to 40.
-# less than 40.
-
-initial_value = float(input('Enter a number: '))
-if initial_value > 40:
-    print('the number is more than 40!')
-elif initial_value == 40:
-    print('the number is equal to 40!')
-elif initial_value < 40:
-    print('the number is less than 40!')
+# Check if number is more than, equal to, or less than 40
+value = float(input('Enter a number: '))
+if value > 40:
+    print('The number is more than 40!')
+elif value == 40:
+    print('The number is equal to 40!')
+else:
+    print('The number is less than 40!')
 
 ##########################################################
 
 n = 0
-
 while n < 10:
     print(n)
-    n = n + 2
+    n += 2
 
-#
 n = 1
-
 while True:
     print(n)
-    n = n + 2
+    n += 2
 
-#
 n = 1
-
 while n < 15:
     print(n)
-    n = n + 2
+    n += 2
 
-#
 n = 0
-
 while n < 200:
     print(n)
-    n = n + 2
+    n += 2
 
-#
 n = 100
 while n > 0:
     print(n)
-    n = n - 1
+    n -= 1
 
-#
 counter = 0
-
 while counter < 3:
     print('Inside loop')
-    counter = counter + 1
+    counter += 1
 print('Outside while')
 
 ##########################################################
@@ -83,89 +70,68 @@ print('Outside while')
 count = 0
 while count < 5:
     print(count, 'is less than 5')
-    count = count + 1
+    count += 1
 print(count, 'is not less than 5')
 
 ##########################################################
 
-# write a script that outputs positive even numbers:
-# a) less or equal to 200
-# b) more or equal to 20 but less or equal to 40
-# c) without break
-
-# a)
+# Print even numbers:
+# a) less than or equal to 200
 n = 0
-
 while n <= 200:
     print(n)
-    n = n + 2
+    n += 2
 
-# b)
+# b) from 20 to 40
 n = 20
-
 while n <= 40:
     print(n)
-    n = n + 2
+    n += 2
 
-# c)
+# c) infinite loop (intended to keep printing even numbers)
 n = 0
-
 while True:
-    0 <= 200
     print(n)
-    n = n + 2
+    n += 2
 
 ##########################################################
 
-# what does the script below do?
+# Evaluate expressions
 for y in range(1, 11):
     if 2 * y + 4 == 14:
-        print('y =',y,'is the result')
+        print('y =', y, 'is the result')
 
-#
 for y in range(1, 11):
-    if 4 * y -2 == 38:
-        print('y =',y,'is the result')
+    if 4 * y - 2 == 38:
+        print('y =', y, 'is the result')
 
 ##########################################################
 
-# write a script that outputs any input number and prints
-# the following:
-# 1 + 2 + 3 + ... + n
-
-#
-n = float(input('please input a number: '))
-sum = 0
+# Sum of numbers from 1 to n
+n = float(input('Please input a number: '))
+total = 0
 i = 1
 
 while i <= n:
-    sum = sum + i
-    i = i + 1
-print('The sum is: ', sum)
+    total += i
+    i += 1
+print('The sum is:', total)
 
-# infinite loop
+# Infinite loop version
 while True:
-    n = float(input('please input a number: '))
-    sum = 0
+    n = float(input('Please input a number: '))
+    total = 0
     i = 1
-
     while i <= n:
-        sum = sum + i
-        i = i + 1
-    print('The sum is: ', sum)
+        total += i
+        i += 1
+    print('The sum is:', total)
 
 ##########################################################
 
-# do not use 'sum' since it's booked by python
-# example:
-
+# Example of using Python built-in sum
 marks = [65, 71, 68, 74, 61]
-
-# find sum of all marks
 total_marks = sum(marks)
-print(total_marks)
-
-# Output: 339
+print(total_marks)  # Output: 339
 
 ##########################################################
-
