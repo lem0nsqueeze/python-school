@@ -169,4 +169,3 @@ Write a program where the user can:
 2. Get a welcome message based on age  
 3. Get their favorite number squared with a function  
 4. See error messages if they enter invalid values  
-
