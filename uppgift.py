@@ -5,7 +5,7 @@ from datetime import datetime
 name = input("Hej vad heter du: ")
 age = int(input("Hur gammal är du?: "))
 
-# Calculate the current date
+# Calculate the current year
 current_year = datetime.now().year
 
 # Calculate current year and adds 100 - your age to tell what year you turn 100
