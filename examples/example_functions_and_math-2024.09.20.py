@@ -21,7 +21,7 @@ def remove_from_list(my_list, element):
 def main():
     my_list = []
     while True:
-        action = input("Do you want to (1) add, (2) write, (3) remove, or (4) exit? ")
+        action = input("Do you want to (1) add, (2) read, (3) remove, or (4) exit? ")
 
         match action:
             case '1':
