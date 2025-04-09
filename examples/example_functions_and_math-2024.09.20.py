@@ -3,7 +3,7 @@ def add_to_list(my_list, element):
     my_list.append(element)
     print(f"The element '{element}' was added to the list.")
 
-# Function to write out all elements in the list
+# Function to print all elements in the list
 def print_list(my_list):
     print("Contents in the list:")
     for item in my_list:
@@ -21,7 +21,7 @@ def remove_from_list(my_list, element):
 def main():
     my_list = []
     while True:
-        action = input("Do you want to (1) add, (2) read, (3) remove, or (4) exit? ")
+        action = input("Do you want to (1) add, (2) read, (3) remove (4) exit? ")
 
         match action:
             case '1':
@@ -33,11 +33,11 @@ def main():
                 element = input("Choose an element to remove: ")
                 remove_from_list(my_list, element)
             case '4':
-                print("Closing the program.")
+                print("Exiting...")
                 break
             case _:
-                print("Invalid option, try again.")
+                print("Invalid choice, try again.")
 
-# Run program
+# Run application
 if __name__ == "__main__":
     main()
